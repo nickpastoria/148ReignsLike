@@ -3,13 +3,11 @@ firstCard = {
   prompt: "You are Ilya Petrov",
   rightChoiceText: "Who?",
   rightChoice: function(){
-      addPackToDeck("Petrov Family")
     addToTopDeck("Intro2")
     },
   
   leftChoiceText: "Ok", 
   leftChoice: function(){
-      addPackToDeck("Petrov Family")
     addToTopDeck("Intro2")
   },
   name: "?",
@@ -46,9 +44,11 @@ cardPool = {
     prompt: "We need any advantage we can get. Do you understand?",
     rightChoiceText: "I Will do my best!",
       rightChoice: function(){
+        addToTopDeck("  i1")
       },
     leftChoiceText: "Fine. . . ", 
     leftChoice: function(){
+      addToTopDeck("  i1")
     },
     name: "?",
     resultText: "",

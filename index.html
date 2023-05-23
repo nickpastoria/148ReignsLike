@@ -60,10 +60,10 @@
 <!-- here is the URL for the google sheet for this project:  https://docs.google.com/spreadsheets/d/1y6r9WXb2a9FA0KxBa__Y3LriUq8_KHakMViJ2irY5D4/edit?usp=sharing -->
 <pre id="data" style="visibility:collapse; display: none">
   ID (unique)	prompt	rightChoiceText	rightChoice	leftChoiceText	leftChoice	name	resultText	image	priority	pack
-  pf1	Your daughter Spills Milk on the table during breakfast.	Punish Her	addResource("family", -20)	Help her clean it up	addResource("family", 10)	Daughter		Daughter.png	1	Petrov Family
-  pf2	Your wife comes to say goodbye before she leaves for work. She seems worried about something.	Ask her what's bothering her.	addResource("family", 20);addResource("sanity", -10)	Give her a reassuring kiss and let her go.	addResource("family", -10);	Wife		Wife.png	2	Petrov Family
-  pf3	You sit down for dinner with your family. Your children are excitedly talking about their day. How do you respond?	Engage with them and ask about their day.	addResource("sanity", -10);addResource("family", 20)	Nod absent-mindedly while thinking about your work.	addResource("knowledge", 10);addResource("sanity", -20);addResource("family",-10)	Family		Family.png	2	Petrov Family
-  pf4	Your youngest child asks for a bedtime story. You're tired but they look at you with hopeful eyes. What do you do?	Read them their favorite story.	addResource("family", 20)	Apologize and promise to read them a story tomorrow.	addResource("family", -10)	Daughter		Daughter.png	1	Petrov Family
+  i1	I am your commanding officer, you are to report any progress to me. Do you understand?	Yes	addResource("n", 10);addToTopDeck("  i2")	Only when I see fit	addResource("n", -10);addToTopDeck("  i2")	General Boris Volkov		Volkov.png	3	Introductions
+  i2	Hello Ilya, I am Yelena Smirnova. I am the best record keeper in the USSR on the occult and otherworldly. Its a pleasure to work with you.	You as well	addResource("s", 10);addToTopDeck("  i3")	We shall see	addResource("s", -10);addToTopDeck("  i3")	Yelena Smirnova		Smirnova.png	3	Introductions
+  i3	Greetings. I am Father Alexei, I have been brought on to your project as a spiritual advisor. I trust you are moving forward cautiously and in the light of god.	I am	addResource("r", 10);addPackToDeck("BasicResearch")	As long as you don't get in the way	addResource("r", -10);addPackToDeck("BasicResearch")	Father Alexei		Alexei.png	3	Introductions
+  br1																					
 </pre>
 </body>
 </html>
