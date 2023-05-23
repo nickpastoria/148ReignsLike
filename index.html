@@ -1,5 +1,5 @@
 <!DOCTYPEhtml><head>
-<title> Game Name</title>
+<title> Corruption Of Ilya Petrov</title>
 
 
 <script src="jquery-1.11.2.min.js"></script>
@@ -59,14 +59,11 @@
 <!-- this data should be exported as a "tab separated", that is what our interpretation function expects -->
 <!-- here is the URL for the google sheet for this project:  https://docs.google.com/spreadsheets/d/1y6r9WXb2a9FA0KxBa__Y3LriUq8_KHakMViJ2irY5D4/edit?usp=sharing -->
 <pre id="data" style="visibility:collapse; display: none">
-ID (unique)	prompt	rightChoiceText	rightChoice	leftChoiceText	leftChoice	name	resultText	image	priority	pack
-q	Do you have Nuts?	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog		Squirrel.jpg	1	bumbling
-w	Hey a Person	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog		Squirrel.png	2	bumbling
-e	Squeak	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog		Squirrel.png	2	bumbling
-r	(Panicking)	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog	Something Alarms Your	Squirrel.png	1	bumbling
-tr	woops	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog		Squirrel.png	2	bumbling
-
+  ID (unique)	prompt	rightChoiceText	rightChoice	leftChoiceText	leftChoice	name	resultText	image	priority	pack
+  pf1	Your daughter Spills Milk on the table during breakfast.	Punish Her	addResource("family", -20)	Help her clean it up	addResource("family", 10)	Daughter		Daughter.png	1	Petrov Family
+  pf2	Your wife comes to say goodbye before she leaves for work. She seems worried about something.	Ask her what's bothering her.	addResource("family", 20);addResource("sanity", -10)	Give her a reassuring kiss and let her go.	addResource("family", -10);	Wife		Wife.png	2	Petrov Family
+  pf3	You sit down for dinner with your family. Your children are excitedly talking about their day. How do you respond?	Engage with them and ask about their day.	addResource("sanity", -10);addResource("family", 20)	Nod absent-mindedly while thinking about your work.	addResource("knowledge", 10);addResource("sanity", -20);addResource("family",-10)	Family		Family.png	2	Petrov Family
+  pf4	Your youngest child asks for a bedtime story. You're tired but they look at you with hopeful eyes. What do you do?	Read them their favorite story.	addResource("family", 20)	Apologize and promise to read them a story tomorrow.	addResource("family", -10)	Daughter		Daughter.png	1	Petrov Family
 </pre>
-
 </body>
 </html>

@@ -1,64 +1,58 @@
 
 firstCard = {
-  prompt: "Isn't painting Wonderful???",
-  rightChoiceText: "I LOVE PAINTING",
+  prompt: "You are Ilya Petrov",
+  rightChoiceText: "Who?",
   rightChoice: function(){
-    addResource("veggies", 20)
-      addPackToDeck("bumbling")
-    addToTopDeck("VanGoghHappy")
+      addPackToDeck("Petrov Family")
+    addToTopDeck("Intro2")
     },
   
-  leftChoiceText: "PAINTING SUCKS", 
+  leftChoiceText: "Ok", 
   leftChoice: function(){
-    addResource("meat", 20)
-      addPackToDeck("bumbling")
-    addToTopDeck("VanGoghBetrayed")
-    enemiesMade += 1;
+      addPackToDeck("Petrov Family")
+    addToTopDeck("Intro2")
   },
-  name: "Van Gogh",
+  name: "?",
   resultText: "",
-  image: "./images/VanGosh.png",
+  image: "./images/Petrov.png",
   priority: 1,
   pack : "none"
 }
 
 
 cardPool = {
-  "uniqueIDList" : ["VanGoghHappy", "VanGoghBetrayed"],
+  "uniqueIDList" : ["Intro2", "Intro3"],
   
-  "VanGoghHappy" : {
-    prompt: "Really? Let's be friends",
+  "Intro2" : {
+    prompt: "Investigate the Paranormal for the benefit of the USSR",
     rightChoiceText: "Lol Okay",
       rightChoice: function(){
-      addResource("veggies", 10)
+        addToTopDeck("Intro3")
       },
     leftChoiceText: "XD HAHA. . .No", 
     leftChoice: function(){
-      addResource("meat", 20)
-      addToTopDeck("VanGoghBetrayed")
+      addToTopDeck("Intro3")
     enemiesMade += 1;
     },
-    name: "Van Gogh",
+    name: "?",
     resultText: "",
-    image: "./images/VanGosh.png",
+    image: "./images/Petrov.png",
     priority: 2,
     pack : "none"
   },
 
 
-  "VanGoghBetrayed": {
-    prompt: "To Heck with you",
-    rightChoiceText: ". . . ",
+  "Intro3": {
+    prompt: "We need any advantage we can get. Do you understand?",
+    rightChoiceText: "I Will do my best!",
       rightChoice: function(){
-      addResource("veggies", 20)
       },
     leftChoiceText: "Fine. . . ", 
     leftChoice: function(){
-      addResource("meat", 100)
     },
-    name: "Van Gogh",
+    name: "?",
     resultText: "",
-    image: "./images/VanGosh.png",
+    image: "./images/Petrov.png",
     priority: 2,
     pack : "none"
   }
