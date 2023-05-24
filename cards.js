@@ -56,7 +56,6 @@ cardPool = {
     priority: 2,
     pack : "none"
   }
-
 }
 
 

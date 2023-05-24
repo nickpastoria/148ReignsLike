@@ -30,11 +30,21 @@
 <!-- this data should be exported as a "tab separated", that is what our interpretation function expects -->
 <!-- here is the URL for the google sheet for this project:  https://docs.google.com/spreadsheets/d/1y6r9WXb2a9FA0KxBa__Y3LriUq8_KHakMViJ2irY5D4/edit?usp=sharing -->
 <pre id="data" style="visibility:collapse; display: none">ID (unique)	prompt	rightChoiceText	rightChoice	leftChoiceText	leftChoice	name	resultText	image	priority	pack
-i1	I am your commanding officer, you are to report any progress to me. Do you understand?	Yes	addResource("n", 10);addToTopDeck("i2")	Only when I see fit	addResource("n", -10);addToTopDeck("i2")	General Boris Volkov	nan	Volkov.png	3	Introductions
-i2	Hello Ilya, I am Yelena Smirnova. I am the best record keeper in the USSR on the occult and otherworldly. Its a pleasure to work with you.	You as well	addResource("s", 10);addToTopDeck("i3")	We shall see	addResource("s", -10);addToTopDeck("i3")	Yelena Smirnova	nan	Smirnova.png	3	Introductions
-i3	Greetings. I am Father Alexei, I have been brought on to your project as a spiritual advisor. I trust you are moving forward cautiously and in the light of god.	I am	addResource("r", 10);addPackToDeck("Basic Research")	As long as you don't get in the way	addResource("r", -10);addPackToDeck("Basic Research")	Father Alexei	nan	Alexei.png	3	Introductions
-br1	I've been thinking that we should put some energy into researching Molybdomancy. What do you think?	Yes we should	addResource("k", 10);addPackToDeck("Molybdomancy")	Perhaps we should focus on something else	addResource("k", -10);addResource("s", 10)	Yelena Smirnova	nan	Smirnova.png	3	Basic Research
-br2	The locals have caught wind of our program. What should we do?	Send Father Alexei to calm them	addResource("r", 10)	Send Smirnova to educate them	addResource("s", -10);addToTopDeck("  i3")	General Boris Volkov	nan	Volkov.png	3	Basic Research
-br3	I'm afriad that we may be straying too far from the light of god	I agree, lets pull back	addResource("r", 10);addResource("s", 10)	Nonesense	addResource("r", -10);addResource("n", 10)	Father Alexei	nan	Alexei.png	3	Basic Research
+i1	I am your commanding officer, you are to report any progress to me. Do you understand?	Yes	addToTopDeck("i2")	Only when I see fit	addToTopDeck("i2")	General Boris Volkov		Volkov.png	3	Introductions
+i2	Hello Ilya, I am Yelena Smirnova. I am the best record keeper in the USSR on the occult and otherworldly. Its a pleasure to work with you.	You as well	addToTopDeck("i3")	We shall see	addToTopDeck("i3")	Yelena Smirnova		Smirnova.png	3	Introductions
+i3	Greetings. I am Father Alexei, I have been brought on to your project as a spiritual advisor. I trust you are moving forward cautiously and in the light of god.	I am	addPackToDeck("Basic Research")	As long as you don't get in the way	addPackToDeck("Basic Research")	Father Alexei		Alexei.png	3	Introductions
+br1	I've been thinking that we should put some energy into researching Molybdomancy. What do you think?	Yes we should	addPackToDeck("Molybdmancy")	Perhaps we should focus on something else		Yelena Smirnova		Smirnova.png	3	Basic Research
+br2	The locals have caught wind of our program. What should we do?	Send Father Alexei to calm them		Send Smirnova to educate them		General Boris Volkov		Volkov.png	3	Basic Research
+br3	I'm afriad that we may be straying too far from the light of god	I agree, lets pull back		Nonesense		Father Alexei		Alexei.png	3	Basic Research
+br4	Rumors of a vampire living in the woods. Does that sound like something we should investigate?	Vampires? Absolutely	addPackToDeck("Vampires")	Even if there were I don't think they would help us	addResource("n" -10)	General Boris Volkov		Volkov.png	3	Basic Research
+br5	You start to hear footsteps in the night	Ok?		I should set up cameras in my house	addPackToDeck("Ghosts")	Ilya Petrov		Bedroom.png	3	Basic Research
+v1	Disgraceful! Our team sent out to find vampires has gone missing!	This must be a good sign	addPackToDeck("VampiresFind")	I'll have father Alexei pray for them	addPackToDeck("VampiresFind")	General Boris Volkov		Volkov.png	3	Vampires
+vf1	We understand you are searching for us. Why?	Knowledge	addPackToDeck("VampireContacts")	Power	addPackToDeck("VampireContacts")	Figure	We will be in contact	Figure.png	3	VampiresFind
+m1	Ok we killed a goat then perfromed the molybdemancy. Some scientists say it looks like an axe, others say it looks like lungs. What do you think?	Axe		Lungs		Yelena Smirnova		Molybdmancy.png	3	Molybdmancy
+m2	The scientists are unable to determine what this looks like	Nothing		Progress		Yelena Smirnova		Molybdmancy.png	3	Molybdmancy
+vc1	So you want to harness the darkness for your own benefit?	Yes		Its for the good of my country		Figure		Figure.png	3	VampireContacts
+g1	The cameras in your room picked up no motion	I Must Be Crazy		Keep Searching		Yelena Smirnova		Bedroom.png	3	Ghosts
+g2	Overnight your cameras picked up your water flask falling off your desk	Aha I knew it		Intriguing		Yelena Smirnova		Bedroom.png	3	Ghosts
+g3	A white speck flew across the screen at 1:00 AM	Signs from beyond		A speck of dust likely!		Yelena Smirnova		Bedroom.png	3	Ghosts
 </pre>
 </body>

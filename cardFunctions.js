@@ -1,7 +1,3 @@
-
-
-
-
 deck= [];
 
 // card is a key, except when it is an onject and not from the pool
@@ -11,40 +7,45 @@ function addToTopDeck(card, fromPool=true){
   else deck.push(card);
   console.log(card)
 }
-function drawFromDeck(){
-  if (deck.length ==0) alert ("out of cards :(")
-  return deck.pop();
-}
-function shuffleIntoDeck(card, fromPool=true){
-  addToTopDeck(card, fromPool)
-  shuffleDeck(deck)
+function addCardToDeck(card, fromPool=true) {
+  if (fromPool) deck.push(cardPool[card])
+  else deck.push(card);
 }
 
-// shuffles the deck and then arranges by priority
-function shuffleDeck(array){
-  positions = []
-  for (x in array) positions.push({value:array[x], roll:Math.random()});
-  console.log(positions)
-  positions.sort(function(a, b){return a.roll - b.roll;})  
-    
-  newArray = [];
-  for (x in positions) {newArray.push(positions[x].value)}
-  newArray.sort(function(a, b){a.priority - b.priority})
-  
-    return newArray;
-  }
-  
-  
-  function addPackToDeck(pack){
-    console.log("attempt to add pack")
-    for (x in cardPool.uniqueIDList){
-      console.log(pack, cardPool.uniqueIDList[x].pack)
-      if (cardPool[cardPool.uniqueIDList[x]].pack == pack) {
-        shuffleIntoDeck(cardPool.uniqueIDList[x]);
-      }
+function addPackToDeck(pack) {
+  for (var x in cardPool.uniqueIDList){
+    if (cardPool[cardPool.uniqueIDList[x]].pack == pack) {
+      addCardToDeck(cardPool.uniqueIDList[x]);
     }
-    
   }
+  shuffleDeck(deck);
+}
+
+function drawFromDeck(){
+  if (deck.length ==0) alert("out of cards :(")
+  return deck.pop();
+}
+
+function shuffleDeck(array) {
+  var positions = [];
+  for (var x in array) {
+    positions.push({value: array[x], roll: Math.random()});
+  }
+
+  positions.sort(function(a, b) {
+    if (a.value.priority == b.value.priority) {
+      return a.roll - b.roll;
+    } else {
+      return a.value.priority - b.value.priority;
+    }
+  });
+
+  deck = [];
+  for (var x in positions) {
+    deck.push(positions[x].value);
+  }
+}
+
   
   function importCardData() {
 
