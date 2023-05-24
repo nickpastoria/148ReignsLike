@@ -1,0 +1,169 @@
+body {
+  background-color: #beef;
+  
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  
+}
+
+
+
+div {
+  background-color: #feebae;
+  
+}
+
+#gameContainer {
+  width: 400px;
+  height: 650px;
+  margin: auto;
+}
+
+#statIcons {
+  width: 100%;
+  height: 75px;
+  
+}
+#dialogBox{
+  padding: 10px;
+  width: parent;
+  height: 75px;
+  
+  
+}
+#cardStack{
+  width:400px;
+  height:400px;
+  
+}
+#cardName{
+  padding: 10px;
+  width: parent;
+  width:100%;
+  height:50px;
+  
+}
+#playerData{
+  padding: 10px;
+  width: parent;
+  width:100%;
+  height:50px;
+  
+}
+
+
+
+#activeCard {
+  background-color: red;
+  
+  width: 400px;
+  height: 400px;
+  
+  transform-origin: 50% 100%;
+  transform-style: preserve-3D;
+  
+  
+  transition: opacity 0.5s linear, transform 0.5s cubic-bezier(0.7, 0.7, 0.84, .99);
+}
+#resultText {
+  position: absolute;
+  background-color: #000000AA;
+  color: white;
+  
+  text-align: center;
+  
+  width: 400px;
+  height: 400px;
+  
+}
+
+
+#cardImage {
+  width: 400px;
+  height: 400px;
+object-fit: cover;
+  
+}
+
+
+.choiceRightRotate{
+  transform: rotate(30deg);
+
+}
+.choiceLeftRotate{
+  transform: rotate(-30deg);}
+
+.choiceNoneRotate{}
+
+#cardStack{
+  
+   position: relative;
+  
+}
+
+
+#textLeft {
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  left: 20px;;
+  width: 50px;
+  
+  
+  transition: opacity 0.5s linear;
+
+}
+#textRight {
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+
+
+  transition: color 0.5s linear;
+}
+
+
+.statIconImage {
+  width: 75px;
+  height:75px;
+  
+  mix-blend-mode: multiply;
+  
+  position: absolute;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+.resourceBarFront {
+  width: 75px;
+  height: 75px;
+  
+  position: absolute;
+  z-index: 1;
+  bottom:0;
+  background-color: parent;
+  
+  transform-origin: bottom;
+  transform: scaleY(0.5);
+  transition: transform 2s linear; 
+}
+.resourceBarBack {
+  width: 75px;
+  height: 75px;
+  
+  position: absolute;
+  top:0;
+  background-color: black;
+}
+
+.statIconImageContainer{
+  position: relative;
+  display: inline-block;
+  height: 75px;
+  width: 75px
+  
+}
