@@ -23,7 +23,7 @@ function addPackToDeck(pack) {
 
 function drawFromDeck(){
   if (deck.length ==0) alert("out of cards :(")
-  return deck.pop();
+  return deck.shift();
 }
 
 function shuffleDeck(array) {
