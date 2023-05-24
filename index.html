@@ -1,69 +1,40 @@
-<!DOCTYPEhtml><head>
+<!DOCTYPE tml>
+
+<head>
 <title> Corruption Of Ilya Petrov</title>
-
-
 <script src="jquery-1.11.2.min.js"></script>
 <script src="input_output.js"></script>
 <script src="mathUtil.js"></script>
-
 <script src="statAnalysis.js"></script>
 <script src="statIcons.js"></script>
-
-
 <script src="cardFunctions.js"></script>
 <script src="cards.js"></script>
 <script src="failCards.js"></script>
 <script src="cardInterface.js"></script>
 <script src="showPlayerData.js"></script>
-
-
-<link rel="stylesheet" href="ui.css">
-
-
-
-
-
-
+<link href="ui.css" rel="stylesheet"/>
 </head>
 <body>
-
 <div id="gameContainer">
-  
-  <div id="statIcons"> </div>
-
-
-  <div id="dialogBox"> </div>
-
-
-  <div id="cardStack"> 
-    <div id="textLeft"> Left Choice </div>
-    <div id="textRight"> Right Choice </div>
-    
-  
-    <div id="activeCard" onMouseDown=makeActive()><div id="resultText"> A report</div><image id="cardImage"> </div>
-    
-  
-  </div>
-
-  <div id="cardName"> 
-  
-  </div>
-
-
-  <div id="playerData"> </div> 
-
+<div id="statIcons"> </div>
+<div id="dialogBox"> </div>
+<div id="cardStack">
+<div id="textLeft"> Left Choice </div>
+<div id="textRight"> Right Choice </div>
+<div id="activeCard" onmousedown="makeActive()"><div id="resultText"> A report</div><image id="cardImage"/> </div>
 </div>
-
-
-
+<div id="cardName">
+</div>
+<div id="playerData"> </div>
+</div>
 <!-- this data should be exported as a "tab separated", that is what our interpretation function expects -->
 <!-- here is the URL for the google sheet for this project:  https://docs.google.com/spreadsheets/d/1y6r9WXb2a9FA0KxBa__Y3LriUq8_KHakMViJ2irY5D4/edit?usp=sharing -->
-<pre id="data" style="visibility:collapse; display: none">
-  ID (unique)	prompt	rightChoiceText	rightChoice	leftChoiceText	leftChoice	name	resultText	image	priority	pack
-  i1	I am your commanding officer, you are to report any progress to me. Do you understand?	Yes	addResource("n", 10);addToTopDeck("  i2")	Only when I see fit	addResource("n", -10);addToTopDeck("  i2")	General Boris Volkov		Volkov.png	3	Introductions
-  i2	Hello Ilya, I am Yelena Smirnova. I am the best record keeper in the USSR on the occult and otherworldly. Its a pleasure to work with you.	You as well	addResource("s", 10);addToTopDeck("  i3")	We shall see	addResource("s", -10);addToTopDeck("  i3")	Yelena Smirnova		Smirnova.png	3	Introductions
-  i3	Greetings. I am Father Alexei, I have been brought on to your project as a spiritual advisor. I trust you are moving forward cautiously and in the light of god.	I am	addResource("r", 10);addPackToDeck("BasicResearch")	As long as you don't get in the way	addResource("r", -10);addPackToDeck("BasicResearch")	Father Alexei		Alexei.png	3	Introductions
-  br1																					
+<pre id="data" style="visibility:collapse; display: none">ID (unique)	prompt	rightChoiceText	rightChoice	leftChoiceText	leftChoice	name	resultText	image	priority	pack
+i1	I am your commanding officer, you are to report any progress to me. Do you understand?	Yes	addResource("n", 10);addToTopDeck("i2")	Only when I see fit	addResource("n", -10);addToTopDeck("i2")	General Boris Volkov	nan	Volkov.png	3	Introductions
+i2	Hello Ilya, I am Yelena Smirnova. I am the best record keeper in the USSR on the occult and otherworldly. Its a pleasure to work with you.	You as well	addResource("s", 10);addToTopDeck("i3")	We shall see	addResource("s", -10);addToTopDeck("i3")	Yelena Smirnova	nan	Smirnova.png	3	Introductions
+i3	Greetings. I am Father Alexei, I have been brought on to your project as a spiritual advisor. I trust you are moving forward cautiously and in the light of god.	I am	addResource("r", 10);addPackToDeck("Basic Research")	As long as you don't get in the way	addResource("r", -10);addPackToDeck("Basic Research")	Father Alexei	nan	Alexei.png	3	Introductions
+br1	I've been thinking that we should put some energy into researching Molybdomancy. What do you think?	Yes we should	addResource("k", 10);addPackToDeck("Molybdomancy")	Perhaps we should focus on something else	addResource("k", -10);addResource("s", 10)	Yelena Smirnova	nan	Smirnova.png	3	Basic Research
+br2	The locals have caught wind of our program. What should we do?	Send Father Alexei to calm them	addResource("r", 10)	Send Smirnova to educate them	addResource("s", -10);addToTopDeck("  i3")	General Boris Volkov	nan	Volkov.png	3	Basic Research
+br3	I'm afriad that we may be straying too far from the light of god	I agree, lets pull back	addResource("r", 10);addResource("s", 10)	Nonesense	addResource("r", -10);addResource("n", 10)	Father Alexei	nan	Alexei.png	3	Basic Research
 </pre>
 </body>
-</html>

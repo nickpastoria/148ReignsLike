@@ -44,11 +44,11 @@ cardPool = {
     prompt: "We need any advantage we can get. Do you understand?",
     rightChoiceText: "I Will do my best!",
       rightChoice: function(){
-        addToTopDeck("  i1")
+        addToTopDeck("i1")
       },
     leftChoiceText: "Fine. . . ", 
     leftChoice: function(){
-      addToTopDeck("  i1")
+      addToTopDeck("i1")
     },
     name: "?",
     resultText: "",
