@@ -39,7 +39,7 @@ br3	I'm afriad that we may be straying too far from the light of god	I agree, le
 br4	Rumors of a vampire living in the woods. Does that sound like something we should investigate?	Vampires? Absolutely	addPackToDeck("Vampires")	Even if there were I don't think they would help us	addResource("n" -10)	General Boris Volkov		Volkov.png	2	Basic Research
 br5	You start to hear footsteps in the night	Ok?		I should set up cameras in my house	addPackToDeck("Ghosts")	Ilya Petrov		Bedroom.png	2	Basic Research
 v1	Disgraceful! Our team sent out to find vampires has gone missing!	This must be a good sign	addPackToDeck("VampiresFind")	I'll have father Alexei pray for them	addPackToDeck("VampiresFind")	General Boris Volkov		Volkov.png	2	Vampires
-vf1	We understand you are searching for us. Why?	Knowledge	addPackToDeck("VampireContacts")	Power	addPackToDeck("VampireContacts")	Figure	We will be in contact	Figure.png	3	VampiresFind
+vf1	We understand you are searching for us. Why?	Knowledge	addPackToDeck("VampireContacts")	Power	addPackToDeck("VampireContacts")	Figure	We will be in contact	Figure.png	2	VampiresFind
 m1	Ok we killed a goat then perfromed the molybdemancy. Some scientists say it looks like an axe, others say it looks like lungs. What do you think?	Axe		Lungs		Yelena Smirnova		Molybdmancy.png	2	Molybdmancy
 m2	The scientists are unable to determine what this looks like	Nothing		Progress		Yelena Smirnova		Molybdmancy.png	2	Molybdmancy
 vc1	So you want to harness the darkness for your own benefit?	Yes		Its for the good of my country		Figure		Figure.png	1	VampireContacts
@@ -47,5 +47,9 @@ g1	The cameras in your room picked up no motion	I Must Be Crazy		Keep Searching	
 g2	Overnight your cameras picked up your water flask falling off your desk	Aha I knew it		Intriguing		Yelena Smirnova		Bedroom.png	2	Ghosts
 g3	A white speck flew across the screen at 1:00 AM	Signs from beyond		A speck of dust likely!		Yelena Smirnova		Bedroom.png	2	Ghosts
 g4	Your covers came off your bed all by themselves!	Bring in a specialist!		Now that's odd...		Father Alexei		Bedroom.png	3	Ghosts
+vc2	We will give you the knowledge that you seek. Please send more troops our way	Got it		I see no reason to bargain with you		Figure		Figure.png	2	VampireContacts
+vc3	What do you think we should do about the lost troops sent to find vampires?	Send more troops to investigate	addCardToDeck("vc4")	We've learned everything we can	addCardToDeck("vc5")	General Boris Volkov		Volkov.png	3	VampireContacts
+vc4	We appreciate your support. We will bestow upon you an ancient truth	At what cost		Its the least I could do		Figure		Figure.png	3	Special
+vc5	Why have more troops not come?	They are on their way		I will sacrifice no more lives to please you		Figure		Figure.png	3	Special
 </pre>
 </body>

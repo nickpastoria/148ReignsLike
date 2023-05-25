@@ -10,6 +10,7 @@ function addToTopDeck(card, fromPool=true){
 function addCardToDeck(card, fromPool=true) {
   if (fromPool) deck.push(cardPool[card])
   else deck.push(card);
+  shuffleDeck(deck);
 }
 
 function addPackToDeck(pack) {
